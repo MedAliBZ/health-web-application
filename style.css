@@ -1,0 +1,54 @@
+.bmi .btn{
+    margin-left: 2%;
+    color: #457b9d;
+    border-color: #457b9d!important;
+}
+.btn:hover,.btn:active{
+background-color: #457b9d!important;
+outline-color: #457b9d!important;
+color: #011627;
+}
+
+.here{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: inherit;  
+}
+
+input{
+    width: 20%!important;
+}
+
+.here span{
+    margin-top: 0.3%;
+    margin-left: auto;
+    margin-right: 1%;
+}
+
+.bmi{
+    margin: 3%;
+    color: white;
+}
+
+.bmi h2{
+    margin-top: 7%;
+}
+
+.bmi span{
+    margin-left: 3%;
+}
+
+.resultat{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    display: none;
+}
+
+#bmii{
+    color: #FF9F1C;
+}
+
+#health{
+    color: #FF9F1C;
+}
