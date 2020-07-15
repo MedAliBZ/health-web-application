@@ -5,8 +5,9 @@ let gender=document.getElementById("gender")
 let goal=document.getElementById("goal")
 
 let calculate = document.getElementById("calculate")
-let k=goal.value
-console.log(k)
+
+let calories=document.getElementById("calories")
+let gl=document.getElementById("gl")
 
 
 calculate.addEventListener("click",function result(){
@@ -19,7 +20,23 @@ calculate.addEventListener("click",function result(){
 })
 .then(response => {
 	return response.json()
-}).then(data=>console.log(data.data.goals["maintain weight"]))
+}).then(data=>{
+	if(goal.value=="Maintain weight"){
+		calories.innerHTML=data.data.goals[`maintain weight`]
+		gl.innerHTML="maintain weight"
+		gl.nextSibling.innerHTML=""
+	}
+	else if (goal.value=="Weight gain" || goal.value=="Mild weight gain" || goal.value=="Extreme weight gain"){
+		calories.innerHTML=data.data.goals[`${goal.value}`].calory
+		gl.innerHTML=`gain ${data.data.goals[`${goal.value}`]["gain weight"]}`
+		gl.nextSibling.innerHTML=" per week"
+	}
+	else {
+		calories.innerHTML=data.data.goals[`${goal.value}`].calory
+		gl.innerHTML=`lose ${data.data.goals[`${goal.value}`]["loss weight"]}`
+		gl.nextSibling.innerHTML=" per week"
+	}
+})
 .catch(err => {
 	console.log(err);
 });

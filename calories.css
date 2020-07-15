@@ -36,3 +36,15 @@ color: #011627;
 #calculate{
     margin-top: 6%;
 }
+
+.resultat{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 35px;
+    margin: 5%;
+    margin-bottom: 8%;
+}
+
+#calories,#gl{
+    color: #5ca5d3;
+}
