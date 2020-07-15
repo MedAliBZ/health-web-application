@@ -1,0 +1,38 @@
+.titre{
+    justify-content: center;
+    margin: 3%;
+    color: white;
+}
+
+.titre h2{
+    margin-top: 7%;
+}
+
+.in span{
+    color: white;
+}
+
+.in div{
+    width: 25%;
+    margin: 3%;
+}
+
+.in{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn{
+    color: #457b9d;
+    border-color: #457b9d!important;
+}
+.btn:hover,.btn:active{
+background-color: #457b9d!important;
+outline-color: #457b9d!important;
+color: #011627;
+}
+
+#calculate{
+    margin-top: 6%;
+}
