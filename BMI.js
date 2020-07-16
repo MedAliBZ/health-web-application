@@ -139,23 +139,32 @@ let dropnav=document.querySelector(".dropdown-menu")
 let nav2=document.querySelector(".navbar")
 let navcolor=document.getElementById("navcolor")
 let navchange=document.getElementById("navchange")
+
 let bodycolor=document.getElementById("bodycolor")
 let bodychange=document.getElementById("bodychange")
+
 let footercolor=document.getElementById("footercolor")
 let footerchange=document.getElementById("footerchange")
 let foot=document.querySelector(".site-footer")
+
 let navtextcolor=document.getElementById("navtextcolor")
 let navtextchange=document.getElementById("navtextchange")
 let text2=document.getElementsByClassName("nav-link")
+
 let footertextcolor=document.getElementById("footertextcolor")
 let footertextchange=document.getElementById("footertextchange")
 let footertext=document.getElementsByClassName("cus")
 let footertexta=document.getElementsByClassName("cusa")
+
 let bodybuttoncolor=document.getElementById("bodybuttonscolor")
 let bodybuttonchange=document.getElementById("bodybuttonschange")
 let bodybutton=document.getElementsByClassName("btn")
 
+let bodytextcolor=document.getElementById("bodytextcolor")
+let bodytextchange=document.getElementById("bodytextchange")
+let bodytext=document.getElementsByClassName("loun")
 
+bodytextcolor.value="#FFFFFF"
 bodybuttoncolor.value="#457b9d"
 navcolor.value="#457b9d"
 bodycolor.value="#011627"
@@ -163,6 +172,13 @@ footercolor.value="#457b9d"
 footertextcolor.value="#011627"
 
 
+
+bodytextchange.addEventListener("click",function ch(){
+	event.preventDefault();
+	for(let i=0;i<bodytext.length;i++)
+	bodytext[i].style.cssText=`color: ${bodytextcolor.value} !important;`
+	
+})
 
 bodybuttonchange.addEventListener("click",function ch(){
 	event.preventDefault();
