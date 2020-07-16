@@ -135,7 +135,7 @@ calculate1.addEventListener("click",function result(){
 // customiser
 
 
-
+let dropnav=document.querySelector(".dropdown-menu")
 let nav2=document.querySelector(".navbar")
 let navcolor=document.getElementById("navcolor")
 let navchange=document.getElementById("navchange")
@@ -144,13 +144,26 @@ let bodychange=document.getElementById("bodychange")
 let footercolor=document.getElementById("footercolor")
 let footerchange=document.getElementById("footerchange")
 let foot=document.querySelector(".site-footer")
+let navtextcolor=document.getElementById("navtextcolor")
+let navtextchange=document.getElementById("navtextchange")
+let text2=document.getElementsByClassName("nav-link")
 
 
 
+navcolor.value="#457b9d"
+bodycolor.value="#011627"
+footercolor.value="#457b9d"
+
+navtextchange.addEventListener("click",function ch(){
+	event.preventDefault();
+	for(let i=0;i<text2.length;i++)
+	text2[i].style.cssText=`color: ${navtextcolor.value} !important;`
+})
 
 navchange.addEventListener("click",function ch(){
 	event.preventDefault();
 	nav2.style.cssText=`background-color: ${navcolor.value} !important;`
+	dropnav.style.cssText=`background-color: ${navcolor.value} !important;`
 })
 
 bodychange.addEventListener("click",function ch(){
@@ -172,21 +185,20 @@ let m=document.getElementById("main")
 let m1=document.getElementById("main1")
 let m2=document.getElementById("main2")
 
-
 nBMI.addEventListener("click",function dis(){
-	m.style.display="inline"
+	m.style.display="block"
 	m1.style.display="none"
 	m2.style.display="none"
 })
 
 nCAL.addEventListener("click",function dis(){
-	m1.style.display="inline"
+	m1.style.display="block"
 	m.style.display="none"
 	m2.style.display="none"
 })
 
 nCUS.addEventListener("click",function dis(){
-	m2.style.display="inline"
+	m2.style.display="block"
 	m1.style.display="none"
 	m.style.display="none"
 })

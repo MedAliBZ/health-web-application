@@ -9,7 +9,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand nav-link" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -29,10 +29,10 @@
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a id="nBMI" class="dropdown-item" href="#">BMI calculator</a>
-                        <a id="nCAL" class="dropdown-item" href="#">Calories counter</a>
+                        <a id="nBMI" class="dropdown-item nav-link" href="#">BMI calculator</a>
+                        <a id="nCAL" class="dropdown-item nav-link" href="#">Calories counter</a>
                         <div class="dropdown-divider"></div>
-                        <a id="nCUS" class="dropdown-item" href="#">Customise your website</a>
+                        <a id="nCUS" class="dropdown-item nav-link" href="#">Customise your website</a>
                     </div>
                 </li>
             </ul>
@@ -73,7 +73,7 @@
         <div class="in1">
             <div>
                 <span>Age</span>
-                <input id="age1" class="form-control mr-sm-2" type="search" placeholder="Year" aria-label="Search">
+                <input id="age1" class="form-control mr-sm-2" type="search" placeholder="Years" aria-label="Search">
             </div>
             <div>
                 <span>Height</span>
@@ -120,20 +120,20 @@
         <h2>customiser</h2>
         <form>
             <span>Change the navbar's color</span>
-            <input id="navcolor" class="form-control mr-sm-2" type="search"
-                placeholder="Hex code or write a color ex: red" aria-label="Search">
+            <input id="navcolor" class="form-control mr-sm-2" type="color" aria-label="Search">
             <button id="navchange" class="btn btn1" type="submit">change</button>
+            <span>Change the navbar's color</span>
+            <input id="navtextcolor" class="form-control mr-sm-2" type="color" aria-label="Search">
+            <button id="navtextchange" class="btn btn1" type="submit">change</button>
         </form>
         <form>
             <span>Change the body's color</span>
-            <input id="bodycolor" class="form-control mr-sm-2" type="search"
-                placeholder="Hex code or write a color ex: red" aria-label="Search">
+            <input id="bodycolor" class="form-control mr-sm-2" type="color" aria-label="Search">
             <button id="bodychange" class="btn btn1" type="submit">change</button>
         </form>
         <form>
             <span>Change the footer's color</span>
-            <input id="footercolor" class="form-control mr-sm-2" type="search"
-                placeholder="Hex code or write a color ex: red" aria-label="Search">
+            <input id="footercolor" class="form-control mr-sm-2" type="color" aria-label="Search">
             <button id="footerchange" class="btn btn1" type="submit">change</button>
         </form>
     </div>

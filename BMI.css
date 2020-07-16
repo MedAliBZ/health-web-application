@@ -132,3 +132,12 @@ color: #011627;
     margin-top: 7%;
     color: white;
 }
+
+#main2 form{
+    display: flex;
+    margin: 5%;
+}
+
+#main2 span{
+    margin-left: 5%;
+}

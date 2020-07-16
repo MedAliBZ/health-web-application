@@ -6,11 +6,9 @@
     top: 0;
 }
 
-
-
 body{
   background-color: #011627;
-  color: red;
+  color: red!important;
 }
 .site-footer
 {
@@ -23,7 +21,7 @@ body{
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
+  border-top-color:#011627;
   opacity:0.5
 }
 .site-footer hr.small
@@ -32,7 +30,7 @@ body{
 }
 .site-footer h6
 {
-  color:#fff;
+  color:#011627;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
