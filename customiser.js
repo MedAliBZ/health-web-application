@@ -1,12 +1,13 @@
-let nav=document.querySelector("#test")
-let k
+let nav2=document.querySelector("#test2")
+var k2
+console.log(k2)
 
 
-nav.addEventListener("click",function ch(){
+nav2.addEventListener("click",function ch(){
 
-    k = "red";
-    document.body.style.backgroundColor=k
+    k2 = "red";
+    document.body.style.backgroundColor=k2
 })
-console.log(nav)
-
-document.body.style.backgroundColor=k
+console.log(nav2)
+if(k2!=undefined)
+    document.body.style.backgroundColor=k2
