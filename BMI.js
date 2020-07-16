@@ -147,12 +147,60 @@ let foot=document.querySelector(".site-footer")
 let navtextcolor=document.getElementById("navtextcolor")
 let navtextchange=document.getElementById("navtextchange")
 let text2=document.getElementsByClassName("nav-link")
+let footertextcolor=document.getElementById("footertextcolor")
+let footertextchange=document.getElementById("footertextchange")
+let footertext=document.getElementsByClassName("cus")
+let footertexta=document.getElementsByClassName("cusa")
+let bodybuttoncolor=document.getElementById("bodybuttonscolor")
+let bodybuttonchange=document.getElementById("bodybuttonschange")
+let bodybutton=document.getElementsByClassName("btn")
 
 
-
+bodybuttoncolor.value="#457b9d"
 navcolor.value="#457b9d"
 bodycolor.value="#011627"
 footercolor.value="#457b9d"
+footertextcolor.value="#011627"
+
+
+
+bodybuttonchange.addEventListener("click",function ch(){
+	event.preventDefault();
+	for(let i=0;i<bodybutton.length;i++){
+	bodybutton[i].style.cssText=`color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
+	}
+	for(let i=0;i<bodybutton.length;i++){
+		bodybutton[i].addEventListener("mouseover",function ch(){
+			event.preventDefault();
+			bodybutton[i].style.cssText=`color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
+		})}
+	
+	for(let i=0;i<bodybutton.length;i++){
+		bodybutton[i].addEventListener("mouseout",function ch(){
+			event.preventDefault();
+			bodybutton[i].style.cssText=`color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
+		})}
+})
+
+
+for(let i=0;i<footertexta.length;i++){
+	footertexta[i].addEventListener("mouseout",function ch(){
+		event.preventDefault();
+		footertexta[i].style.cssText=`color: ${footertextcolor.value} !important;`
+	})}
+
+for(let i=0;i<footertexta.length;i++){
+footertexta[i].addEventListener("mouseover",function ch(){
+	event.preventDefault();
+	footertexta[i].style.cssText=`color: #a8dadc !important;`
+})}
+
+footertextchange.addEventListener("click",function ch(){
+	event.preventDefault();
+	for(let i=0;i<footertext.length;i++)
+	footertext[i].style.cssText=`color: ${footertextcolor.value} !important;`
+	document.hr.style.cssText=`color: ${footertextcolor.value} !important;`
+})
 
 navtextchange.addEventListener("click",function ch(){
 	event.preventDefault();

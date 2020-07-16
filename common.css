@@ -1,3 +1,24 @@
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
 .navbar{
     background-color: #457b9d!important;
     color: white!important;
@@ -6,9 +27,12 @@
     top: 0;
 }
 
+.btn{
+  box-shadow: none!important;
+} 
+
 body{
   background-color: #011627;
-  color: red!important;
 }
 .site-footer
 {
@@ -42,7 +66,7 @@ body{
 }
 .site-footer a:hover
 {
-  color:#a8dadc;
+  color:#a8dadc!important;
   text-decoration:none;
 }
 .footer-links

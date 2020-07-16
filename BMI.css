@@ -122,7 +122,6 @@ color: #011627;
 /* customiser */
 
 #main2{
-    height: 500px;
     margin-left: 3%;
     display: block;
     color: white;
@@ -130,14 +129,40 @@ color: #011627;
 
 #main2 h2{
     margin-top: 7%;
+    margin-bottom: 5%;
     color: white;
 }
 
 #main2 form{
     display: flex;
     margin: 5%;
+    margin-left: 0;
 }
 
 #main2 span{
+    font-size: 17px;
     margin-left: 5%;
+}
+
+#main2 .btn{
+    height: 40px;
+}
+
+.bodyc{
+    display: flex !important;
+}
+
+.navbarc{
+    display: flex !important;
+}
+.footerc{
+    display: flex !important;
+}
+#main2 input{
+    width: 120px!important;
+}
+
+#reset{
+    margin-left: 40%;
+    width: 25%;
 }
