@@ -117,7 +117,17 @@ color: #011627;
     color: #5ca5d3;
 }
 
+.resultat1{
+    display: none;
+}
 
+.spinner-grow{
+    margin-left: 50%;
+}
+
+.ktiba{
+    display: none;
+}
 
 /* customiser */
 

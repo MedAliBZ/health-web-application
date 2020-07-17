@@ -3,14 +3,18 @@ let height = document.getElementById("height")
 let weight = document.getElementById("weight")
 let calculate = document.getElementById("calculate")
 let resultat = document.querySelector(".resultat")
-
+let spinner=document.querySelectorAll(".spinner-grow")
 
 let bmi = document.getElementById("bmii")
 let health = document.getElementById("health")
+let ktiba1=document.querySelector(".ktiba1")
 
 
 
 calculate.addEventListener("click", function calcul(){
+	spinner[0].style.display="block"
+	resultat.style.display = "inherit"
+	ktiba1.style.display = "none"
 	event.preventDefault();
 	fetch(`https://fitness-calculator.p.rapidapi.com/bmi?age=${age.value}&height=${height.value}&weight=${weight.value}`, {
 		"method": "GET",
@@ -78,13 +82,21 @@ calculate.addEventListener("click", function calcul(){
 				health.innerHTML ="severe thinness"
 			}
 			bmi.innerHTML = data.bmi.toFixed(2)
+			spinner[0].style.display="none"
 			resultat.style.display = "block"
+			ktiba1.style.display = "inherit"
 			console.log(data)
 		})
 		.catch(err => {
 			console.log(err);
 		});
 })
+
+
+
+
+// calories
+
 
 
 let age1=document.getElementById("age1")
@@ -97,9 +109,14 @@ let calculate1= document.getElementById("calculate1")
 
 let calories1=document.getElementById("calories1")
 let gl1=document.getElementById("gl1")
+let resultat1=document.querySelector(".resultat1")
+let ktiba=document.querySelector(".ktiba")
 
 
 calculate1.addEventListener("click",function result(){
+	resultat1.style.display="inherit"
+	spinner[1].style.display="inherit"
+	ktiba.style.display="none"
 	fetch(`https://fitness-calculator.p.rapidapi.com/dailycalory?heigth=${height1.value}&age=${age1.value}&gender=${gender1.value}&weigth=${weight1.value}`, {
 	"method": "GET",
 	"headers": {
@@ -111,16 +128,22 @@ calculate1.addEventListener("click",function result(){
 	return response.json()
 }).then(data=>{
 	if(goal1.value=="Maintain weight"){
+		spinner[1].style.display="none"
+		ktiba.style.display="inherit"
 		calories1.innerHTML=data.data.goals[`maintain weight`]
 		gl1.innerHTML="maintain weight"
 		gl1.nextSibling.innerHTML=""
 	}
 	else if (goal1.value=="Weight gain" || goal1.value=="Mild weight gain" || goal1.value=="Extreme weight gain"){
+		spinner[1].style.display="none"
+		ktiba.style.display="inherit"
 		calories1.innerHTML=data.data.goals[`${goal1.value}`].calory
 		gl1.innerHTML=`gain ${data.data.goals[`${goal1.value}`]["gain weight"]}`
 		gl1.nextSibling.innerHTML=" per week"
 	}
 	else {
+		spinner[1].style.display="none"
+		ktiba.style.display="inherit"
 		calories1.innerHTML=data.data.goals[`${goal1.value}`].calory
 		gl1.innerHTML=`lose ${data.data.goals[`${goal1.value}`]["loss weight"]}`
 		gl1.nextSibling.innerHTML=" per week"
