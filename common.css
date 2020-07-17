@@ -22,9 +22,9 @@ input[type="color"]:focus,
 .navbar{
     background-color: #457b9d!important;
     color: white!important;
-    position: fixed;
+    /* position: fixed;
     width: -webkit-fill-available;
-    top: 0;
+    top: 0; */
 }
 
 .btn{

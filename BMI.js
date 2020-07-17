@@ -112,8 +112,15 @@ let gl1=document.getElementById("gl1")
 let resultat1=document.querySelector(".resultat1")
 let ktiba=document.querySelector(".ktiba")
 
+height1.innerHTML=height.value
+age1.value=age.value
+weight1.value=weight.value
 
 calculate1.addEventListener("click",function result(){
+	if(age1.value=="" || weight1.value=="" || height1.value=="")
+	alert("You got some empty inputs")
+	else{
+	console.log(age1.value)
 	resultat1.style.display="inherit"
 	spinner[1].style.display="inherit"
 	ktiba.style.display="none"
@@ -152,7 +159,7 @@ calculate1.addEventListener("click",function result(){
 .catch(err => {
 	console.log(err);
 });
-})
+}})
 
 
 // customiser
