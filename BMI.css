@@ -15,20 +15,34 @@ outline-color: #457b9d!important;
 color: #011627;
 }
 
-.here{
+/* .here{
     display: flex;
     flex-wrap: wrap;
     margin-top: inherit;  
-}
+    justify-content: space-evenly;
+} */
 
 input{
     width: 20%!important;
 }
 
-.here span{
+/* .here span{
     margin-top: 0.3%;
     margin-left: auto;
     margin-right: 1%;
+} */
+
+/* .here div{
+    width: -webkit-fill-available;
+    display: contents;
+} */
+#calculate{
+    height: fit-content;
+    margin-top: 4.7%;
+}
+
+#ideal{
+    color: green;
 }
 
 .bmi{
@@ -83,6 +97,9 @@ input{
 .in1 div{
     width: 25%;
     margin: 3%;
+}
+.in1 input{
+    width: -webkit-fill-available!important;
 }
 
 .in1{
