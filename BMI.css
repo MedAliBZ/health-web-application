@@ -193,3 +193,54 @@ color: #011627;
     margin-left: 40%;
     width: 25%;
 }
+
+/* home */
+
+.main0{
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+.main0 h2{
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.main0 span{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.quotes{
+    font-family: 'Quicksand', sans-serif;
+    background-color: #457b9d;
+    padding: 5% 3% 5% 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #011627;
+}
+
+.inside-quotes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inside-quotes div{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.vl{
+    margin-right: 2%;
+    margin-left: 2%;
+    border-left: solid;
+}
+
+.quotes h3{
+    margin-bottom: 2%;
+}

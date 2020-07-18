@@ -19,6 +19,10 @@ input[type="color"]:focus,
   outline: 0 none;
 }
 
+.loun{
+  color: white!important;
+}
+
 .navbar{
     background-color: #457b9d!important;
     color: white!important;

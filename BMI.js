@@ -227,12 +227,15 @@ let bodytextcolor = document.getElementById("bodytextcolor")
 let bodytextchange = document.getElementById("bodytextchange")
 let bodytext = document.getElementsByClassName("loun")
 
+let quotescolor=document.querySelector(".quotes")
+
 bodytextcolor.value = "#FFFFFF"
 bodybuttoncolor.value = "#457b9d"
 navcolor.value = "#457b9d"
 bodycolor.value = "#011627"
 footercolor.value = "#457b9d"
 footertextcolor.value = "#011627"
+navtextcolor.value="#22313F"
 
 
 
@@ -282,7 +285,7 @@ footertextchange.addEventListener("click", function ch() {
 	event.preventDefault();
 	for (let i = 0; i < footertext.length; i++)
 		footertext[i].style.cssText = `color: ${footertextcolor.value} !important;`
-	document.hr.style.cssText = `color: ${footertextcolor.value} !important;`
+			foot.style.cssText = `background-color: ${footercolor.value} !important;`
 })
 
 navtextchange.addEventListener("click", function ch() {
@@ -295,6 +298,7 @@ navchange.addEventListener("click", function ch() {
 	event.preventDefault();
 	nav2.style.cssText = `background-color: ${navcolor.value} !important;`
 	dropnav.style.cssText = `background-color: ${navcolor.value} !important;`
+	quotescolor.style.cssText = `background-color: ${navcolor.value} !important;`
 })
 
 bodychange.addEventListener("click", function ch() {
