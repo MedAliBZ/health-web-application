@@ -201,6 +201,8 @@ color: #011627;
     margin-top: 5%;
     font-family: 'Quicksand', sans-serif;
     color: white;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .main0 h2{
@@ -243,4 +245,23 @@ color: #011627;
 
 .quotes h3{
     margin-bottom: 2%;
+}
+
+.main00{
+    background-color: #457b9d;
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Quicksand', sans-serif;
+    color:  #011627;
+    padding: 4%;
+}
+
+.main00 h2{
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.main00 span{
+    font-weight: 400;
+    font-size: 30px;
 }

@@ -299,6 +299,7 @@ navchange.addEventListener("click", function ch() {
 	nav2.style.cssText = `background-color: ${navcolor.value} !important;`
 	dropnav.style.cssText = `background-color: ${navcolor.value} !important;`
 	quotescolor.style.cssText = `background-color: ${navcolor.value} !important;`
+	document.querySelector(".main00").style.cssText = `background-color: ${navcolor.value} !important;`
 })
 
 bodychange.addEventListener("click", function ch() {
