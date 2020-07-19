@@ -326,6 +326,7 @@ let h=document.getElementById("home")
 
 nhome.addEventListener("click", function() {
 	h.style.display = "block"
+	h.scrollTop = 0;
 	m1.style.display = "none"
 	m2.style.display = "none"
 	m.style.display= "none"
@@ -333,6 +334,7 @@ nhome.addEventListener("click", function() {
 
 nBMI.addEventListener("click", function() {
 	m.style.display = "block"
+	m.scrollTop = 0;
 	m1.style.display = "none"
 	m2.style.display = "none"
 	h.style.display= "none"
@@ -340,6 +342,7 @@ nBMI.addEventListener("click", function() {
 
 nCAL.addEventListener("click", function() {
 	m1.style.display = "block"
+	m1.scrollTop = 0;
 	m.style.display = "none"
 	m2.style.display = "none"
 	h.style.display= "none"
@@ -347,6 +350,7 @@ nCAL.addEventListener("click", function() {
 
 nCUS.addEventListener("click", function() {
 	m2.style.display = "block"
+	m2.scrollTop = 0;
 	m1.style.display = "none"
 	m.style.display = "none"
 	h.style.display= "none"
@@ -361,6 +365,7 @@ let Custc=document.getElementById("Custc")
 
 Custc.addEventListener("click", function() {
 	m2.style.display = "block"
+	m2.scrollTop = 0;
 	m1.style.display = "none"
 	m.style.display = "none"
 	h.style.display= "none"
@@ -369,6 +374,7 @@ Custc.addEventListener("click", function() {
 
 Calsc.addEventListener("click", function() {
 	m1.style.display = "block"
+	m1.scrollTop = 0;
 	m.style.display = "none"
 	m2.style.display = "none"
 	h.style.display= "none"
@@ -377,6 +383,7 @@ Calsc.addEventListener("click", function() {
 
 Bmic.addEventListener("click", function() {
 	m.style.display = "block"
+	m.scrollTop = 0;
 	m1.style.display = "none"
 	m2.style.display = "none"
 	h.style.display= "none"
