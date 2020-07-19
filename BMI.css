@@ -231,7 +231,6 @@ color: #011627;
 .inside-quotes{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .inside-quotes div{
