@@ -317,24 +317,37 @@ footerchange.addEventListener("click", function ch() {
 let nBMI = document.getElementById("nBMI")
 let nCAL = document.getElementById("nCAL")
 let nCUS = document.getElementById("nCUS")
+let nhome=document.getElementById("nhome")
 let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
+let h=document.getElementById("home")
+
+
+nhome.addEventListener("click", function dis() {
+	h.style.display = "block"
+	m1.style.display = "none"
+	m2.style.display = "none"
+	m.style.display= "none"
+})
 
 nBMI.addEventListener("click", function dis() {
 	m.style.display = "block"
 	m1.style.display = "none"
 	m2.style.display = "none"
+	h.style.display= "none"
 })
 
 nCAL.addEventListener("click", function dis() {
 	m1.style.display = "block"
 	m.style.display = "none"
 	m2.style.display = "none"
+	h.style.display= "none"
 })
 
 nCUS.addEventListener("click", function dis() {
 	m2.style.display = "block"
 	m1.style.display = "none"
 	m.style.display = "none"
+	h.style.display= "none"
 })
