@@ -149,12 +149,13 @@ color: #011627;
 /* customiser */
 
 #main2{
-    margin-left: 3%;
+    
     display: none;
     color: white;
 }
 
 #main2 h2{
+    margin-left: 3%;
     margin-top: 7%;
     margin-bottom: 5%;
     color: white;
@@ -176,13 +177,16 @@ color: #011627;
 }
 
 .bodyc{
+    margin-left: 3%;
     display: flex !important;
 }
 
 .navbarc{
+    margin-left: 3%;
     display: flex !important;
 }
 .footerc{
+    margin-left: 3%;
     display: flex !important;
 }
 #main2 input{
@@ -287,4 +291,13 @@ color: #011627;
 
 .inside-features div button{
     margin-top: 5%;
+}
+
+.log{
+    background-color: #457b9d;
+    margin-left: 0!important;
+}
+
+.carousel{
+    background-color: #457b9d;
 }

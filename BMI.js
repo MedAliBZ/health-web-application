@@ -15,7 +15,7 @@ let ideall = document.getElementById("ideal")
 var ideal = 0
 
 
-calculate.addEventListener("click", function calcul() {
+calculate.addEventListener("click", function () {
 	spinner[0].style.display = "block"
 	resultat.style.display = "inherit"
 	ktiba1.style.display = "none"
@@ -35,7 +35,7 @@ calculate.addEventListener("click", function calcul() {
 				resultat.style.display = "none"
 				alert("You got some empty inputs")
 			}
-			else if(!parseInt(age.value) || !parseInt(height.value) ||!parseInt(weight.value)){
+			else if (!parseInt(age.value) || !parseInt(height.value) || !parseInt(weight.value)) {
 				resultat.style.display = "none"
 				alert("Something wrong happened, please check your inputs")
 			}
@@ -145,12 +145,12 @@ height1.innerHTML = height.value
 age1.value = age.value
 weight1.value = weight.value
 
-calculate1.addEventListener("click", function result() {
+calculate1.addEventListener("click", function () {
 	if (age1.value == "" || weight1.value == "" || height1.value == "")
 		alert("You got some empty inputs")
-	else if(!parseInt(age1.value) || !parseInt(height1.value) ||!parseInt(weight1.value)){
-			alert("Something wrong happened, please check your inputs")
-		}
+	else if (!parseInt(age1.value) || !parseInt(height1.value) || !parseInt(weight1.value)) {
+		alert("Something wrong happened, please check your inputs")
+	}
 	else {
 		console.log(age1.value)
 		resultat1.style.display = "inherit"
@@ -227,7 +227,11 @@ let bodytextcolor = document.getElementById("bodytextcolor")
 let bodytextchange = document.getElementById("bodytextchange")
 let bodytext = document.getElementsByClassName("loun")
 
-let quotescolor=document.querySelector(".quotes")
+let quotescolor = document.querySelector(".quotes")
+
+let reset = document.getElementById("reset")
+
+let log = document.querySelectorAll(".log")
 
 bodytextcolor.value = "#FFFFFF"
 bodybuttoncolor.value = "#457b9d"
@@ -235,31 +239,62 @@ navcolor.value = "#457b9d"
 bodycolor.value = "#011627"
 footercolor.value = "#457b9d"
 footertextcolor.value = "#011627"
-navtextcolor.value="#22313F"
+navtextcolor.value = "#22313F"
 
 
 
-bodytextchange.addEventListener("click", function ch() {
+reset.addEventListener("click", function () {
+	event.preventDefault()
+	bodytextcolor.value = "#FFFFFF"
+	bodybuttoncolor.value = "#457b9d"
+	navcolor.value = "#457b9d"
+	bodycolor.value = "#011627"
+	footercolor.value = "#457b9d"
+	footertextcolor.value = "#011627"
+	navtextcolor.value = "#22313F"
+	foot.style.cssText = `background-color: #457b9d !important;`
+	document.body.style.cssText = `background-color: #011627 !important;`
+	nav2.style.cssText = `background-color: #457b9d !important;`
+	for (let i = 0; i < log.length; i++)
+		log[i].style.cssText = `background-color: ${navcolor.value} !important;`
+	dropnav.style.cssText = `background-color: #457b9d !important;`
+	quotescolor.style.cssText = `background-color: #457b9d !important;`
+	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
+	document.querySelector(".main00").style.cssText = `background-color: #457b9d !important;`
+	for (let i = 0; i < text2.length; i++)
+		text2[i].style.cssText = `color: #22313F !important;`
+	for (let i = 0; i < footertext.length; i++)
+		footertext[i].style.cssText = `color: #011627 !important;`
+	foot.style.cssText = `background-color: #457b9d !important;`
+	for (let i = 0; i < bodybutton.length; i++)
+		bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
+	for (let i = 0; i < bodytext.length; i++)
+		bodytext[i].style.cssText = `color: ${bodytextcolor.value} !important;`
+})
+
+
+
+bodytextchange.addEventListener("click", function () {
 	event.preventDefault();
 	for (let i = 0; i < bodytext.length; i++)
 		bodytext[i].style.cssText = `color: ${bodytextcolor.value} !important;`
 
 })
 
-bodybuttonchange.addEventListener("click", function ch() {
+bodybuttonchange.addEventListener("click", function () {
 	event.preventDefault();
 	for (let i = 0; i < bodybutton.length; i++) {
 		bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
 	}
 	for (let i = 0; i < bodybutton.length; i++) {
-		bodybutton[i].addEventListener("mouseover", function ch() {
+		bodybutton[i].addEventListener("mouseover", function () {
 			event.preventDefault();
 			bodybutton[i].style.cssText = `color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
 		})
 	}
 
 	for (let i = 0; i < bodybutton.length; i++) {
-		bodybutton[i].addEventListener("mouseout", function ch() {
+		bodybutton[i].addEventListener("mouseout", function () {
 			event.preventDefault();
 			bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
 		})
@@ -268,46 +303,49 @@ bodybuttonchange.addEventListener("click", function ch() {
 
 
 for (let i = 0; i < footertexta.length; i++) {
-	footertexta[i].addEventListener("mouseout", function ch() {
+	footertexta[i].addEventListener("mouseout", function () {
 		event.preventDefault();
 		footertexta[i].style.cssText = `color: ${footertextcolor.value} !important;`
 	})
 }
 
 for (let i = 0; i < footertexta.length; i++) {
-	footertexta[i].addEventListener("mouseover", function ch() {
+	footertexta[i].addEventListener("mouseover", function () {
 		event.preventDefault();
 		footertexta[i].style.cssText = `color: #a8dadc !important;`
 	})
 }
 
-footertextchange.addEventListener("click", function ch() {
+footertextchange.addEventListener("click", function () {
 	event.preventDefault();
 	for (let i = 0; i < footertext.length; i++)
 		footertext[i].style.cssText = `color: ${footertextcolor.value} !important;`
-			foot.style.cssText = `background-color: ${footercolor.value} !important;`
+	foot.style.cssText = `background-color: ${footercolor.value} !important;`
 })
 
-navtextchange.addEventListener("click", function ch() {
+navtextchange.addEventListener("click", function () {
 	event.preventDefault();
 	for (let i = 0; i < text2.length; i++)
 		text2[i].style.cssText = `color: ${navtextcolor.value} !important;`
 })
 
-navchange.addEventListener("click", function ch() {
+navchange.addEventListener("click", function () {
 	event.preventDefault();
 	nav2.style.cssText = `background-color: ${navcolor.value} !important;`
 	dropnav.style.cssText = `background-color: ${navcolor.value} !important;`
 	quotescolor.style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".main00").style.cssText = `background-color: ${navcolor.value} !important;`
+	for (let i = 0; i < log.length; i++)
+	log[i].style.cssText = `background-color: ${navcolor.value} !important;`
+	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
 })
 
-bodychange.addEventListener("click", function ch() {
+bodychange.addEventListener("click", function () {
 	event.preventDefault();
 	document.body.style.cssText = `background-color: ${bodycolor.value} !important;`
 })
 
-footerchange.addEventListener("click", function ch() {
+footerchange.addEventListener("click", function () {
 	event.preventDefault();
 	foot.style.cssText = `background-color: ${footercolor.value} !important;`
 })
@@ -317,75 +355,75 @@ footerchange.addEventListener("click", function ch() {
 let nBMI = document.getElementsByClassName("nBMI")
 let nCAL = document.getElementsByClassName("nCAL")
 let nCUS = document.getElementsByClassName("nCUS")
-let nhome=document.getElementsByClassName("nhome")
+let nhome = document.getElementsByClassName("nhome")
 let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
-let h=document.getElementById("home")
+let h = document.getElementById("home")
 
-for(let i=0;i<2;i++){
-nhome[i].addEventListener("click", function() {
-	h.style.display = "block"
-	h.scrollTop = 0;
-	m1.style.display = "none"
-	m2.style.display = "none"
-	m.style.display= "none"
-})
+for (let i = 0; i < 2; i++) {
+	nhome[i].addEventListener("click", function () {
+		h.style.display = "block"
+		h.scrollTop = 0;
+		m1.style.display = "none"
+		m2.style.display = "none"
+		m.style.display = "none"
+	})
 
-nBMI[i].addEventListener("click", function() {
-	m.style.display = "block"
-	m.scrollTop = 0;
-	m1.style.display = "none"
-	m2.style.display = "none"
-	h.style.display= "none"
-})
+	nBMI[i].addEventListener("click", function () {
+		m.style.display = "block"
+		m.scrollTop = 0;
+		m1.style.display = "none"
+		m2.style.display = "none"
+		h.style.display = "none"
+	})
 
-nCAL[i].addEventListener("click", function() {
-	m1.style.display = "block"
-	m1.scrollTop = 0;
-	m.style.display = "none"
-	m2.style.display = "none"
-	h.style.display= "none"
-})
+	nCAL[i].addEventListener("click", function () {
+		m1.style.display = "block"
+		m1.scrollTop = 0;
+		m.style.display = "none"
+		m2.style.display = "none"
+		h.style.display = "none"
+	})
 
-nCUS[i].addEventListener("click", function() {
-	m2.style.display = "block"
-	m2.scrollTop = 0;
-	m1.style.display = "none"
-	m.style.display = "none"
-	h.style.display= "none"
-})
+	nCUS[i].addEventListener("click", function () {
+		m2.style.display = "block"
+		m2.scrollTop = 0;
+		m1.style.display = "none"
+		m.style.display = "none"
+		h.style.display = "none"
+	})
 }
 
 
 //home 
-let Calsc=document.getElementById("Calsc")
-let Bmic=document.getElementById("Bmic")
-let Custc=document.getElementById("Custc")
+let Calsc = document.getElementById("Calsc")
+let Bmic = document.getElementById("Bmic")
+let Custc = document.getElementById("Custc")
 
 
-Custc.addEventListener("click", function() {
+Custc.addEventListener("click", function () {
 	m2.style.display = "block"
 	m2.scrollTop = 0;
 	m1.style.display = "none"
 	m.style.display = "none"
-	h.style.display= "none"
+	h.style.display = "none"
 })
 
 
-Calsc.addEventListener("click", function() {
+Calsc.addEventListener("click", function () {
 	m1.style.display = "block"
 	m1.scrollTop = 0;
 	m.style.display = "none"
 	m2.style.display = "none"
-	h.style.display= "none"
+	h.style.display = "none"
 })
 
 
-Bmic.addEventListener("click", function() {
+Bmic.addEventListener("click", function () {
 	m.style.display = "block"
 	m.scrollTop = 0;
 	m1.style.display = "none"
 	m2.style.display = "none"
-	h.style.display= "none"
+	h.style.display = "none"
 })
