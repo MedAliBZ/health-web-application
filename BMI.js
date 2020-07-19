@@ -356,6 +356,8 @@ let nBMI = document.getElementsByClassName("nBMI")
 let nCAL = document.getElementsByClassName("nCAL")
 let nCUS = document.getElementsByClassName("nCUS")
 let nhome = document.getElementsByClassName("nhome")
+let nfoood=document.getElementsByClassName("nfood")
+let f=document.getElementById("food")
 let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
@@ -365,6 +367,16 @@ for (let i = 0; i < 2; i++) {
 	nhome[i].addEventListener("click", function () {
 		h.style.display = "block"
 		h.scrollTop = 0;
+		f.style.display="none"
+		m1.style.display = "none"
+		m2.style.display = "none"
+		m.style.display = "none"
+	})
+
+	nfoood[i].addEventListener("click", function () {
+		f.style.display="flex"
+		h.style.display = "none"
+		f.scrollTop = 0;
 		m1.style.display = "none"
 		m2.style.display = "none"
 		m.style.display = "none"
@@ -373,6 +385,7 @@ for (let i = 0; i < 2; i++) {
 	nBMI[i].addEventListener("click", function () {
 		m.style.display = "block"
 		m.scrollTop = 0;
+		f.style.display="none"
 		m1.style.display = "none"
 		m2.style.display = "none"
 		h.style.display = "none"
@@ -381,6 +394,7 @@ for (let i = 0; i < 2; i++) {
 	nCAL[i].addEventListener("click", function () {
 		m1.style.display = "block"
 		m1.scrollTop = 0;
+		f.style.display="none"
 		m.style.display = "none"
 		m2.style.display = "none"
 		h.style.display = "none"
@@ -389,6 +403,7 @@ for (let i = 0; i < 2; i++) {
 	nCUS[i].addEventListener("click", function () {
 		m2.style.display = "block"
 		m2.scrollTop = 0;
+		f.style.display="none"
 		m1.style.display = "none"
 		m.style.display = "none"
 		h.style.display = "none"
@@ -402,9 +417,11 @@ let Bmic = document.getElementById("Bmic")
 let Custc = document.getElementById("Custc")
 
 
+
 Custc.addEventListener("click", function () {
 	m2.style.display = "block"
 	m2.scrollTop = 0;
+	f.style.display="none"
 	m1.style.display = "none"
 	m.style.display = "none"
 	h.style.display = "none"
@@ -414,6 +431,7 @@ Custc.addEventListener("click", function () {
 Calsc.addEventListener("click", function () {
 	m1.style.display = "block"
 	m1.scrollTop = 0;
+	f.style.display="none"
 	m.style.display = "none"
 	m2.style.display = "none"
 	h.style.display = "none"
@@ -423,7 +441,34 @@ Calsc.addEventListener("click", function () {
 Bmic.addEventListener("click", function () {
 	m.style.display = "block"
 	m.scrollTop = 0;
+	f.style.display="none"
 	m1.style.display = "none"
 	m2.style.display = "none"
 	h.style.display = "none"
+})
+
+
+
+// food
+
+let foodtext=document.getElementById("food-text")
+let foodsearch=document.getElementById("food-search")
+
+
+
+foodsearch.addEventListener("click",function(){
+	fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${foodtext.value}`, {
+		"method": "GET",
+		"headers": {
+			"x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
+			"x-rapidapi-key": "34d319fce6msh24364e0e0846afbp16acf3jsneb303f62097d"
+		}
+	})
+	.then(response => {
+		return response.json();
+	})
+	.then(data=>console.log(data.parsed[0].food.nutrients))
+	.catch(err => {
+		console.log(err);
+	});
 })

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
     <link rel="stylesheet" href="BMI.css">
@@ -27,7 +27,7 @@
                     <a class="nav-link nhome" href="#">Home <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link nfood" href="#">Food</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -301,21 +301,39 @@
             </div>
             <button class="btn btn1" id="reset" type="submit">reset</button>
         </div>
+<!-- food -->
+<div id="food">
+    <div class="food-search">
+        <input id="food-text" class="form-control mr-sm-2" type="search" placeholder="search for food"
+            aria-label="Search">
+        <button id="food-search" class="btn btn1" type="submit">Search</button>
+    </div>
+        <div class="car">
+            <div>
+              <span>Calories per 100g: </span id="ENERC_KCAL">xx<span><span> Calories.</span>
+            </div>
+            <button id="food-add" class="btn btn1" type="submit">Add</button>
+          </div>
+</div>
+
     </main>
 
+    
     <!-- Site footer -->
     <footer class="cus site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h6 class="cus">About</h6>
-                    <p class="cus text-justify">Healthier is an initiative to help people get their dream's body.<br>Made by
+                    <p class="cus text-justify">Healthier is an initiative to help people get their dream's
+                        body.<br>Made by
                         MAB for the DEMO day.<br>Contact me at: mabouzaiene1@gmail.com</p>
                 </div>
                 <div>
                     <h6 class="cus">Navigation</h6>
                     <ul class="footer-links">
                         <li><a class="cus cusa nhome" href="#">Home</a></li>
+                        <a class="cus cusa nfood" href="#">Food</a>
                         <li><a class="cus cusa nBMI" href="#">BMI Calculator</a></li>
                         <li><a class="cus cusa nCAL" href="#">Calories Calculator</a></li>
                         <li><a class="cus cusa nCUS" href="#">The Customiser</a></li>
@@ -327,7 +345,9 @@
         <div class="container">
             <div class="roww">
                 <p class="cus copyright-text">Copyright &copy; 2020 All Rights Reserved by
-                    <a class="cus cusa" href="https://github.com/DaliHOST/https://github.com/DaliHOST/health-web-application" target="_blank"><i class="fa fa-github"></i> Healthier</a>.
+                    <a class="cus cusa"
+                        href="https://github.com/DaliHOST/https://github.com/DaliHOST/health-web-application"
+                        target="_blank"><i class="fa fa-github"></i> Healthier</a>.
                 </p>
             </div>
         </div>
