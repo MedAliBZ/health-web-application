@@ -324,30 +324,60 @@ let m2 = document.getElementById("main2")
 let h=document.getElementById("home")
 
 
-nhome.addEventListener("click", function dis() {
+nhome.addEventListener("click", function() {
 	h.style.display = "block"
 	m1.style.display = "none"
 	m2.style.display = "none"
 	m.style.display= "none"
 })
 
-nBMI.addEventListener("click", function dis() {
+nBMI.addEventListener("click", function() {
 	m.style.display = "block"
 	m1.style.display = "none"
 	m2.style.display = "none"
 	h.style.display= "none"
 })
 
-nCAL.addEventListener("click", function dis() {
+nCAL.addEventListener("click", function() {
 	m1.style.display = "block"
 	m.style.display = "none"
 	m2.style.display = "none"
 	h.style.display= "none"
 })
 
-nCUS.addEventListener("click", function dis() {
+nCUS.addEventListener("click", function() {
 	m2.style.display = "block"
 	m1.style.display = "none"
 	m.style.display = "none"
+	h.style.display= "none"
+})
+
+
+//home 
+let Calsc=document.getElementById("Calsc")
+let Bmic=document.getElementById("Bmic")
+let Custc=document.getElementById("Custc")
+
+
+Custc.addEventListener("click", function() {
+	m2.style.display = "block"
+	m1.style.display = "none"
+	m.style.display = "none"
+	h.style.display= "none"
+})
+
+
+Calsc.addEventListener("click", function() {
+	m1.style.display = "block"
+	m.style.display = "none"
+	m2.style.display = "none"
+	h.style.display= "none"
+})
+
+
+Bmic.addEventListener("click", function() {
+	m.style.display = "block"
+	m1.style.display = "none"
+	m2.style.display = "none"
 	h.style.display= "none"
 })
