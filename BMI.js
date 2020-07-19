@@ -314,17 +314,17 @@ footerchange.addEventListener("click", function ch() {
 
 // change page
 
-let nBMI = document.getElementById("nBMI")
-let nCAL = document.getElementById("nCAL")
-let nCUS = document.getElementById("nCUS")
-let nhome=document.getElementById("nhome")
+let nBMI = document.getElementsByClassName("nBMI")
+let nCAL = document.getElementsByClassName("nCAL")
+let nCUS = document.getElementsByClassName("nCUS")
+let nhome=document.getElementsByClassName("nhome")
 let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
 let h=document.getElementById("home")
 
-
-nhome.addEventListener("click", function() {
+for(let i=0;i<2;i++){
+nhome[i].addEventListener("click", function() {
 	h.style.display = "block"
 	h.scrollTop = 0;
 	m1.style.display = "none"
@@ -332,7 +332,7 @@ nhome.addEventListener("click", function() {
 	m.style.display= "none"
 })
 
-nBMI.addEventListener("click", function() {
+nBMI[i].addEventListener("click", function() {
 	m.style.display = "block"
 	m.scrollTop = 0;
 	m1.style.display = "none"
@@ -340,7 +340,7 @@ nBMI.addEventListener("click", function() {
 	h.style.display= "none"
 })
 
-nCAL.addEventListener("click", function() {
+nCAL[i].addEventListener("click", function() {
 	m1.style.display = "block"
 	m1.scrollTop = 0;
 	m.style.display = "none"
@@ -348,13 +348,14 @@ nCAL.addEventListener("click", function() {
 	h.style.display= "none"
 })
 
-nCUS.addEventListener("click", function() {
+nCUS[i].addEventListener("click", function() {
 	m2.style.display = "block"
 	m2.scrollTop = 0;
 	m1.style.display = "none"
 	m.style.display = "none"
 	h.style.display= "none"
 })
+}
 
 
 //home 
