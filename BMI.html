@@ -304,17 +304,24 @@
         <!-- food -->
         <div id="food">
             <div class="food-search">
-                <input id="food-text" class="form-control mr-sm-2" type="search" placeholder="search for food"
+                <input id="food-text" class="form-control mr-sm-2" type="search" placeholder="Your food's name"
+                    aria-label="Search">
+                <input id="food-qte" class="form-control mr-sm-2" type="search" placeholder="Quantity in grams"
                     aria-label="Search">
                 <button id="food-search" class="btn btn1" type="submit">Search</button>
             </div>
             <div class="car">
-                <div >
-                    <span class="loun">Calories per 100g: </span><span id="ENERC_KCAL">125.6</span>
-                </div>
                 <div>
+                    <span class="loun">Calories: </span><span id="ENERC_KCAL">125.6</span>
+                </div>
+                
+                <div class="food-quant">
+                    
                     <button id="food-add" class="btn btn1" type="submit">Add</button>
                 </div>
+            </div>
+            <div id="spinner-food" class="spinner-grow text-light" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
 

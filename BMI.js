@@ -336,7 +336,7 @@ navchange.addEventListener("click", function () {
 	quotescolor.style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".main00").style.cssText = `background-color: ${navcolor.value} !important;`
 	for (let i = 0; i < log.length; i++)
-	log[i].style.cssText = `background-color: ${navcolor.value} !important;`
+		log[i].style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
 })
 
@@ -356,8 +356,8 @@ let nBMI = document.getElementsByClassName("nBMI")
 let nCAL = document.getElementsByClassName("nCAL")
 let nCUS = document.getElementsByClassName("nCUS")
 let nhome = document.getElementsByClassName("nhome")
-let nfoood=document.getElementsByClassName("nfood")
-let f=document.getElementById("food")
+let nfoood = document.getElementsByClassName("nfood")
+let f = document.getElementById("food")
 let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
@@ -367,14 +367,14 @@ for (let i = 0; i < 2; i++) {
 	nhome[i].addEventListener("click", function () {
 		h.style.display = "block"
 		h.scrollTop = 0;
-		f.style.display="none"
+		f.style.display = "none"
 		m1.style.display = "none"
 		m2.style.display = "none"
 		m.style.display = "none"
 	})
 
 	nfoood[i].addEventListener("click", function () {
-		f.style.display="flex"
+		f.style.display = "flex"
 		h.style.display = "none"
 		f.scrollTop = 0;
 		m1.style.display = "none"
@@ -385,7 +385,7 @@ for (let i = 0; i < 2; i++) {
 	nBMI[i].addEventListener("click", function () {
 		m.style.display = "block"
 		m.scrollTop = 0;
-		f.style.display="none"
+		f.style.display = "none"
 		m1.style.display = "none"
 		m2.style.display = "none"
 		h.style.display = "none"
@@ -394,7 +394,7 @@ for (let i = 0; i < 2; i++) {
 	nCAL[i].addEventListener("click", function () {
 		m1.style.display = "block"
 		m1.scrollTop = 0;
-		f.style.display="none"
+		f.style.display = "none"
 		m.style.display = "none"
 		m2.style.display = "none"
 		h.style.display = "none"
@@ -403,7 +403,7 @@ for (let i = 0; i < 2; i++) {
 	nCUS[i].addEventListener("click", function () {
 		m2.style.display = "block"
 		m2.scrollTop = 0;
-		f.style.display="none"
+		f.style.display = "none"
 		m1.style.display = "none"
 		m.style.display = "none"
 		h.style.display = "none"
@@ -421,7 +421,7 @@ let Custc = document.getElementById("Custc")
 Custc.addEventListener("click", function () {
 	m2.style.display = "block"
 	m2.scrollTop = 0;
-	f.style.display="none"
+	f.style.display = "none"
 	m1.style.display = "none"
 	m.style.display = "none"
 	h.style.display = "none"
@@ -431,7 +431,7 @@ Custc.addEventListener("click", function () {
 Calsc.addEventListener("click", function () {
 	m1.style.display = "block"
 	m1.scrollTop = 0;
-	f.style.display="none"
+	f.style.display = "none"
 	m.style.display = "none"
 	m2.style.display = "none"
 	h.style.display = "none"
@@ -441,7 +441,7 @@ Calsc.addEventListener("click", function () {
 Bmic.addEventListener("click", function () {
 	m.style.display = "block"
 	m.scrollTop = 0;
-	f.style.display="none"
+	f.style.display = "none"
 	m1.style.display = "none"
 	m2.style.display = "none"
 	h.style.display = "none"
@@ -451,26 +451,51 @@ Bmic.addEventListener("click", function () {
 
 // food
 
-let foodtext=document.getElementById("food-text")
-let foodsearch=document.getElementById("food-search")
+let foodtext = document.getElementById("food-text")
+let foodsearch = document.getElementById("food-search")
 
-let kcal=document.getElementById("ENERC_KCAL")
+let kcal = document.getElementById("ENERC_KCAL")
 
-foodsearch.addEventListener("click",function(){
-	fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${foodtext.value}`, {
-		"method": "GET",
-		"headers": {
-			"x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
-			"x-rapidapi-key": "34d319fce6msh24364e0e0846afbp16acf3jsneb303f62097d"
-		}
-	})
-	.then(response => {
-		return response.json();
-	})
-	.then(data=>{
-		kcal.innerHTML=data.parsed[0].food.nutrients.ENERC_KCAL
-	})
-	.catch(err => {
-		console.log(err);
-	});
+let spinnerf = document.getElementById("spinner-food")//grid
+let carte = document.querySelector(".car")//flex
+
+let foodqte = document.getElementById("food-qte")
+
+foodsearch.addEventListener("click", function () {
+	spinnerf.style.cssText = "display:grid !important;"
+	carte.style.cssText = "display:none !important;"
+	if (foodtext.value == "" || foodqte.value == "") {
+		alert("You have to write something!!")
+		spinnerf.style.cssText = "display:none !important;"
+	}
+	if (!parseFloat(foodqte.value)) {
+		alert("Please write a valid value!")
+		spinnerf.style.cssText = "display:none !important;"
+	}
+	else {
+		fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${foodtext.value}`, {
+			"method": "GET",
+			"headers": {
+				"x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
+				"x-rapidapi-key": "34d319fce6msh24364e0e0846afbp16acf3jsneb303f62097d"
+			}
+		})
+			.then(response => {
+				return response.json();
+			})
+			.then(data => {
+				if (data.parsed.length != 0) {
+					spinnerf.style.cssText = "display:none !important;"
+					carte.style.cssText = "display:inline !important;"
+					kcal.innerHTML = ((parseFloat(data.parsed[0].food.nutrients.ENERC_KCAL) / 100) * parseFloat(foodqte.value))
+				}
+				else {
+					alert("Something wrong happened there is no food with that name!")
+					spinnerf.style.cssText = "display:none !important;"
+				}
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	}
 })
