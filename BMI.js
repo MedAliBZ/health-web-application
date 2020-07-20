@@ -454,7 +454,7 @@ Bmic.addEventListener("click", function () {
 let foodtext=document.getElementById("food-text")
 let foodsearch=document.getElementById("food-search")
 
-
+let kcal=document.getElementById("ENERC_KCAL")
 
 foodsearch.addEventListener("click",function(){
 	fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${foodtext.value}`, {
@@ -467,7 +467,9 @@ foodsearch.addEventListener("click",function(){
 	.then(response => {
 		return response.json();
 	})
-	.then(data=>console.log(data.parsed[0].food.nutrients))
+	.then(data=>{
+		kcal.innerHTML=data.parsed[0].food.nutrients.ENERC_KCAL
+	})
 	.catch(err => {
 		console.log(err);
 	});

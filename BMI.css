@@ -317,14 +317,23 @@ color: #011627;
     text-align: center;
 }
 
-.card{
-    background-color: #011627;
+.car{
+    display: flex;
+    flex-direction: row;
     margin-top: 2%;
-    width: 40%;
     align-items: center;
     align-self: center;
 }
 
-#food-add{
-    width: inherit;
+.car div button{
+    margin-left: 20px;
+}
+
+#ENERC_KCAL{
+    color: #457b9d;
+    font-size: 25px;
+}
+
+.car div span{
+    font-size: 20px;
 }
