@@ -322,17 +322,21 @@
             <div id="spinner-food" class="spinner-grow text-light" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
+            <h2 id="mymeal" class="loun">My meal:</h2><br>
             <div class="meal">
-                <h2 class="loun">My meal:</h2><br>
             <div>
                 <ol id="ingredients" class="loun">
                     
                 </ol>
-                <button id="meal-remove" class="btn btn1" type="submit">Delete this meal</button>
+                <input id="meal1-remove" class="form-control mr-sm-2" type="search" placeholder="num of the ingredient"
+                    aria-label="Search">
+                <button id="meal-remove1" class="btn btn1" type="submit">Delete this ingredient</button>
+                <span class="loun" style="margin-top: 20px;">Or</span>
+                <button id="meal-remove" class="btn btn1" type="submit">Delete the whole meal</button>
             </div>
             </div>
-            <div id="tot" class="loun">
-                <span>Your meal's total calories: </span><span id="tot-text">0</span>
+            <div id="tot">
+                <span class="nav-link">Your meal's total calories: </span><span id="tot-text" class="nav-link">0</span>
             </div>
         </div>
 

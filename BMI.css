@@ -351,9 +351,11 @@ color: #011627;
 }
 
 .meal{
-    display: flex;
+    display: none;
     justify-content: right;
     margin: 5%;
+    margin-top: 0!important;
+    margin-bottom: 0;
 }
 
 .ingredients{
@@ -364,6 +366,7 @@ color: #011627;
     background-color: #457b9d;
     padding: 2%;
     font-size: 50px;
+    margin-top: 10%;
 }
 
 .meal div{
@@ -372,6 +375,16 @@ color: #011627;
 }
 
 #meal-remove{
-    display: none;
     margin-top: 30px;
+}
+
+#meal1-remove{
+    width: inherit!important;
+    margin: 5%;
+}
+
+#mymeal{
+    display: flex;
+    margin:5%;
+    margin-bottom: 0!important;
 }

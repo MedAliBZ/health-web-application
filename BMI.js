@@ -254,6 +254,7 @@ reset.addEventListener("click", function () {
 	navtextcolor.value = "#22313F"
 	foot.style.cssText = `background-color: #457b9d !important;`
 	document.body.style.cssText = `background-color: #011627 !important;`
+	document.querySelector("#tot").style.cssText = `background-color: ${navcolor.value} !important;`
 	nav2.style.cssText = `background-color: #457b9d !important;`
 	for (let i = 0; i < log.length; i++)
 		log[i].style.cssText = `background-color: ${navcolor.value} !important;`
@@ -338,6 +339,7 @@ navchange.addEventListener("click", function () {
 	for (let i = 0; i < log.length; i++)
 		log[i].style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
+	document.querySelector("#tot").style.cssText = `background-color: ${navcolor.value} !important;`
 })
 
 bodychange.addEventListener("click", function () {
@@ -466,6 +468,7 @@ let foodqte = document.getElementById("food-qte")
 let addfood = document.getElementById("food-add")
 
 let rem = document.getElementById("meal-remove")
+let rem1 = document.getElementById("meal-remove1")
 
 let textnode
 let s
@@ -513,25 +516,37 @@ foodsearch.addEventListener("click", function () {
 	}
 })
 
-					
-					addfood.addEventListener("click", function () {
-						let node = document.createElement("LI");
-						carte.style.cssText = "display:none !important;"
-						document.getElementById("tot-text").innerHTML = s;
-						node.appendChild(textnode);
-						document.getElementById("ingredients").appendChild(node);
-						foodtext.value = ""
-						foodqte.value = ""
-						node.replaceChild(textnode,textnode)
-						console.log(node)
-						if (document.getElementById("ingredients").childElementCount > 0)
-							rem.style.display = "inline"
-					})
 
-rem.addEventListener("click",function(){
-	let no= document.getElementById("ingredients")
-	Array.from(no.querySelectorAll('*')).forEach(n => n.remove())
-	rem.style.display="none"
+addfood.addEventListener("click", function () {
+	let node = document.createElement("LI");
+	carte.style.cssText = "display:none !important;"
+	document.getElementById("tot-text").innerHTML = s;
+	node.appendChild(textnode);
+	document.getElementById("ingredients").appendChild(node);
+	foodtext.value = ""
+	foodqte.value = ""
+	node.replaceChild(textnode, textnode)
+	if (document.getElementById("ingredients").childElementCount > 0)
+	document.querySelector(".meal").style.display="flex"
+})
+
+rem.addEventListener("click", function () {
+	let no = document.getElementById("ingredients")
+	no.querySelectorAll('*').forEach(n => n.remove())
+	document.querySelector(".meal").style.display="none"
 	document.getElementById("tot-text").innerHTML = 0
-	delete(node)
+})
+
+rem1.addEventListener("click",function(){
+	let no =document.getElementById("ingredients")
+	let childs=no.childNodes
+	let tab=childs[document.getElementById("meal1-remove").value].innerHTML.split(" ")
+	console.log(tab)
+
+	document.getElementById("tot-text").innerHTML = parseFloat(document.getElementById("tot-text").innerHTML)-parseFloat(tab[tab.length-2])
+	no.removeChild(no.childNodes[document.getElementById("meal1-remove").value])
+	
+	document.getElementById("meal1-remove").value=""
+	if(no.childElementCount==0)
+	document.querySelector(".meal").style.display="none"
 })
