@@ -451,8 +451,10 @@ Bmic.addEventListener("click", function () {
 
 // food
 
+
 let foodtext = document.getElementById("food-text")
 let foodsearch = document.getElementById("food-search")
+
 
 let kcal = document.getElementById("ENERC_KCAL")
 
@@ -460,6 +462,14 @@ let spinnerf = document.getElementById("spinner-food")//grid
 let carte = document.querySelector(".car")//flex
 
 let foodqte = document.getElementById("food-qte")
+
+let addfood = document.getElementById("food-add")
+
+let rem = document.getElementById("meal-remove")
+
+let textnode
+let s
+
 
 foodsearch.addEventListener("click", function () {
 	spinnerf.style.cssText = "display:grid !important;"
@@ -487,7 +497,10 @@ foodsearch.addEventListener("click", function () {
 				if (data.parsed.length != 0) {
 					spinnerf.style.cssText = "display:none !important;"
 					carte.style.cssText = "display:inline !important;"
-					kcal.innerHTML = ((parseFloat(data.parsed[0].food.nutrients.ENERC_KCAL) / 100) * parseFloat(foodqte.value))
+					let k = ((parseFloat(data.parsed[0].food.nutrients.ENERC_KCAL) / 100) * parseFloat(foodqte.value))
+					kcal.innerHTML = k
+					textnode = document.createTextNode(`${foodtext.value}: ${kcal.innerHTML} Calories`);
+					s = parseFloat(document.getElementById("tot-text").innerHTML) + parseFloat(kcal.innerHTML)
 				}
 				else {
 					alert("Something wrong happened there is no food with that name!")
@@ -498,4 +511,27 @@ foodsearch.addEventListener("click", function () {
 				console.log(err);
 			});
 	}
+})
+
+					
+					addfood.addEventListener("click", function () {
+						let node = document.createElement("LI");
+						carte.style.cssText = "display:none !important;"
+						document.getElementById("tot-text").innerHTML = s;
+						node.appendChild(textnode);
+						document.getElementById("ingredients").appendChild(node);
+						foodtext.value = ""
+						foodqte.value = ""
+						node.replaceChild(textnode,textnode)
+						console.log(node)
+						if (document.getElementById("ingredients").childElementCount > 0)
+							rem.style.display = "inline"
+					})
+
+rem.addEventListener("click",function(){
+	let no= document.getElementById("ingredients")
+	Array.from(no.querySelectorAll('*')).forEach(n => n.remove())
+	rem.style.display="none"
+	document.getElementById("tot-text").innerHTML = 0
+	delete(node)
 })

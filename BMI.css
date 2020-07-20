@@ -349,3 +349,29 @@ color: #011627;
     justify-content: center;
     
 }
+
+.meal{
+    display: flex;
+    justify-content: right;
+    margin: 5%;
+}
+
+.ingredients{
+    display: grid;
+}
+
+#tot{
+    background-color: #457b9d;
+    padding: 2%;
+    font-size: 50px;
+}
+
+.meal div{
+    display: flex;
+    flex-direction: column;
+}
+
+#meal-remove{
+    display: none;
+    margin-top: 30px;
+}

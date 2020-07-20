@@ -306,7 +306,7 @@
             <div class="food-search">
                 <input id="food-text" class="form-control mr-sm-2" type="search" placeholder="Your food's name"
                     aria-label="Search">
-                <input id="food-qte" class="form-control mr-sm-2" type="search" placeholder="Quantity in grams"
+                <input id="food-qte" class="form-control mr-sm-2" type="search" placeholder="Quantity in grams or milliliter if liquid"
                     aria-label="Search">
                 <button id="food-search" class="btn btn1" type="submit">Search</button>
             </div>
@@ -316,12 +316,23 @@
                 </div>
                 
                 <div class="food-quant">
-                    
                     <button id="food-add" class="btn btn1" type="submit">Add</button>
                 </div>
             </div>
             <div id="spinner-food" class="spinner-grow text-light" role="status">
                 <span class="sr-only">Loading...</span>
+            </div>
+            <div class="meal">
+                <h2 class="loun">My meal:</h2><br>
+            <div>
+                <ol id="ingredients" class="loun">
+                    
+                </ol>
+                <button id="meal-remove" class="btn btn1" type="submit">Delete this meal</button>
+            </div>
+            </div>
+            <div id="tot" class="loun">
+                <span>Your meal's total calories: </span><span id="tot-text">0</span>
             </div>
         </div>
 
