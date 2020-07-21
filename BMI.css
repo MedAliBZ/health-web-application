@@ -308,7 +308,7 @@ color: #011627;
 .food-search{
     display: flex;
     justify-content: center;
-    margin-top: 8%;
+    margin-top: 3%;
 }
 
 #food{
@@ -430,3 +430,8 @@ color: #011627;
         margin-right: 0!important;
     }
   }
+
+#titlee{
+    align-self: self-start;
+    margin: 5% 0 0 13%;
+}

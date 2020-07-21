@@ -275,6 +275,7 @@ reset.addEventListener("click", function () {
 		bodytext[i].style.cssText = `color: ${bodytextcolor.value} !important;`
 	for (let i = 0; i < kimanav.length; i++)
 	kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
+	reset.style.cssText = `color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
 })
 
 
