@@ -26,20 +26,19 @@
                 <li class="nav-item">
                     <a class="nav-link nhome" href="#">Home <span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nfood" href="#">Food</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Features
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item nav-link nBMI" href="#">BMI calculator</a>
-                        <a class="dropdown-item nav-link nCAL" href="#">Calories counter</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link nCUS" href="#">Customise your website</a>
+                        <a class="dropdown-item nav-link nBMI" href="#">BMI Calculator</a>
+                        <a class="dropdown-item nav-link nCAL" href="#">Calories Calculator</a>
+                        <a class="dropdown-item nav-link nfood" href="#">Food Tracker</a>                        
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nCUS" href="#">Customise your website</a>
                 </li>
             </ul>
         </div>
@@ -334,11 +333,11 @@
                             <ol id="ingredients" class="loun">
 
                             </ol>
-                            <input id="meal1-remove" class="form-control mr-sm-2" type="search"
+                            <input disabled id="meal1-remove" class="form-control mr-sm-2" type="search"
                                 placeholder="num of the ingredient" aria-label="Search">
-                            <button id="meal-remove1" class="btn btn1" type="submit">Delete this ingredient</button>
+                            <button disabled id="meal-remove1" class="btn btn1" type="submit">Delete this ingredient</button>
                             <span class="loun" style="margin-top: 20px;">Or</span>
-                            <button id="meal-remove" class="btn btn1" type="submit">Delete the whole meal</button>
+                            <button disabled id="meal-remove" class="btn btn1" type="submit">Delete the whole meal</button>
                         </div>
                     </div>
                 </div>
@@ -365,9 +364,9 @@
                     <h6 class="cus">Navigation</h6>
                     <ul class="footer-links">
                         <li><a class="cus cusa nhome" href="#">Home</a></li>
-                        <a class="cus cusa nfood" href="#">Food</a>
                         <li><a class="cus cusa nBMI" href="#">BMI Calculator</a></li>
                         <li><a class="cus cusa nCAL" href="#">Calories Calculator</a></li>
+                        <li><a class="cus cusa nfood" href="#">Food Tracker</a></li>
                         <li><a class="cus cusa nCUS" href="#">The Customiser</a></li>
                     </ul>
                 </div>

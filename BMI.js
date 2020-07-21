@@ -198,7 +198,7 @@ calculate1.addEventListener("click", function () {
 // customiser
 
 
-let dropnav = document.querySelector(".dropdown-menu")
+// let dropnav = document.querySelector(".dropdown-menu")
 let nav2 = document.querySelector(".navbar")
 let navcolor = document.getElementById("navcolor")
 let navchange = document.getElementById("navchange")
@@ -233,6 +233,8 @@ let reset = document.getElementById("reset")
 
 let log = document.querySelectorAll(".log")
 
+let kimanav=document.querySelectorAll(".kimanavbar")
+
 bodytextcolor.value = "#FFFFFF"
 bodybuttoncolor.value = "#457b9d"
 navcolor.value = "#457b9d"
@@ -258,7 +260,7 @@ reset.addEventListener("click", function () {
 	nav2.style.cssText = `background-color: #457b9d !important;`
 	for (let i = 0; i < log.length; i++)
 		log[i].style.cssText = `background-color: ${navcolor.value} !important;`
-	dropnav.style.cssText = `background-color: #457b9d !important;`
+	// dropnav.style.cssText = `background-color: #457b9d !important;`
 	quotescolor.style.cssText = `background-color: #457b9d !important;`
 	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".main00").style.cssText = `background-color: #457b9d !important;`
@@ -271,6 +273,8 @@ reset.addEventListener("click", function () {
 		bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
 	for (let i = 0; i < bodytext.length; i++)
 		bodytext[i].style.cssText = `color: ${bodytextcolor.value} !important;`
+	for (let i = 0; i < kimanav.length; i++)
+	kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
 })
 
 
@@ -282,23 +286,30 @@ bodytextchange.addEventListener("click", function () {
 
 })
 
+for (let i = 0; i < bodybutton.length; i++) {
+	bodybutton[i].addEventListener("mousedown", function () {
+		event.preventDefault();
+		bodybutton[i].style.cssText = `color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
+	})
+}
+for (let i = 0; i < bodybutton.length; i++) {
+	bodybutton[i].addEventListener("mouseover", function () {
+		event.preventDefault();
+		bodybutton[i].style.cssText = `color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
+	})
+}
+
+for (let i = 0; i < bodybutton.length; i++) {
+	bodybutton[i].addEventListener("mouseout", function () {
+		event.preventDefault();
+		bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
+	})
+}
+
 bodybuttonchange.addEventListener("click", function () {
 	event.preventDefault();
 	for (let i = 0; i < bodybutton.length; i++) {
-		bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
-	}
-	for (let i = 0; i < bodybutton.length; i++) {
-		bodybutton[i].addEventListener("mouseover", function () {
-			event.preventDefault();
-			bodybutton[i].style.cssText = `color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
-		})
-	}
-
-	for (let i = 0; i < bodybutton.length; i++) {
-		bodybutton[i].addEventListener("mouseout", function () {
-			event.preventDefault();
-			bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important;`
-		})
+		bodybutton[i].style.cssText = `color: ${bodybuttoncolor.value} !important; border-color:${bodybuttoncolor.value} !important; background-color:transparent !important;`
 	}
 })
 
@@ -333,13 +344,15 @@ navtextchange.addEventListener("click", function () {
 navchange.addEventListener("click", function () {
 	event.preventDefault();
 	nav2.style.cssText = `background-color: ${navcolor.value} !important;`
-	dropnav.style.cssText = `background-color: ${navcolor.value} !important;`
+	// dropnav.style.cssText = `background-color: ${navcolor.value} !important;`
 	quotescolor.style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".main00").style.cssText = `background-color: ${navcolor.value} !important;`
 	for (let i = 0; i < log.length; i++)
 		log[i].style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector("#tot").style.cssText = `background-color: ${navcolor.value} !important;`
+	for (let i = 0; i < kimanav.length; i++)
+	kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
 })
 
 bodychange.addEventListener("click", function () {
@@ -516,6 +529,13 @@ foodsearch.addEventListener("click", function () {
 	}
 })
 
+let mealt=document.getElementById("meal1-remove")
+let mealrt=document.getElementById("meal-remove1")
+let mealr=document.getElementById("meal-remove")
+
+mealr.addEventListener("mouseover",function(){
+	event.preventDefault()
+})
 
 addfood.addEventListener("click", function () {
 	let node = document.createElement("LI");
@@ -526,14 +546,19 @@ addfood.addEventListener("click", function () {
 	foodtext.value = ""
 	foodqte.value = ""
 	node.replaceChild(textnode, textnode)
-	if (document.getElementById("ingredients").childElementCount > 0)
-	document.querySelector(".meal").style.display="flex"
+	if (document.getElementById("ingredients").childElementCount > 0){
+		mealr.removeAttribute("disabled")
+		mealrt.removeAttribute("disabled")
+		mealt.removeAttribute("disabled")
+	}
 })
 
 rem.addEventListener("click", function () {
 	let no = document.getElementById("ingredients")
 	no.querySelectorAll('*').forEach(n => n.remove())
-	document.querySelector(".meal").style.display="none"
+	mealr.setAttribute("disabled","true")
+	mealrt.setAttribute("disabled","true")
+	mealt.setAttribute("disabled","true")
 	document.getElementById("tot-text").innerHTML = 0
 })
 
@@ -547,6 +572,10 @@ rem1.addEventListener("click",function(){
 	no.removeChild(no.childNodes[document.getElementById("meal1-remove").value])
 	
 	document.getElementById("meal1-remove").value=""
-	if(no.childElementCount==0)
-	document.querySelector(".meal").style.display="none"
+	if(no.childElementCount==0){
+	mealr.setAttribute("disabled","true")
+	mealrt.setAttribute("disabled","true")
+	mealt.setAttribute("disabled","true")
+	}
 })
+
