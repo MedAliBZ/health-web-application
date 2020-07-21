@@ -360,18 +360,20 @@ color: #011627;
 
 .ingredients{
     display: grid;
+    margin-top: 5%;
+    width: 300px;
 }
 
 #tot{
     background-color: #457b9d;
     padding: 2%;
     font-size: 50px;
-    margin-top: 10%;
 }
 
 .meal div{
     display: flex;
     flex-direction: column;
+    width: 300px;
 }
 
 #meal-remove{
@@ -381,10 +383,50 @@ color: #011627;
 #meal1-remove{
     width: inherit!important;
     margin: 5%;
+    margin-left: 0!important;
 }
 
 #mymeal{
-    display: flex;
+    display: contents;
     margin:5%;
     margin-bottom: 0!important;
 }
+
+#mealq{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.kimanavbar{
+    color: #457b9d;
+}
+
+.akal{
+    font-weight: 600;
+    font-size: 95px;
+    margin-bottom: -20px;
+}
+
+.akber{
+    font-weight: 600;
+    width: 500px;
+    font-size: 120px;
+}
+
+.sghira{
+    width: 500px;
+}
+
+#tot{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    #mealq div{
+        margin-right: 0!important;
+    }
+  }
