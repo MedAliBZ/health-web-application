@@ -533,6 +533,9 @@ let mealt=document.getElementById("meal1-remove")
 let mealrt=document.getElementById("meal-remove1")
 let mealr=document.getElementById("meal-remove")
 
+mealr.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;`
+mealrt.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;`
+
 mealr.addEventListener("mouseover",function(){
 	event.preventDefault()
 })
@@ -558,6 +561,8 @@ rem.addEventListener("click", function () {
 	no.querySelectorAll('*').forEach(n => n.remove())
 	mealr.setAttribute("disabled","true")
 	mealrt.setAttribute("disabled","true")
+	mealr.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
+	mealrt.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
 	mealt.setAttribute("disabled","true")
 	document.getElementById("tot-text").innerHTML = 0
 })
@@ -576,6 +581,8 @@ rem1.addEventListener("click",function(){
 	mealr.setAttribute("disabled","true")
 	mealrt.setAttribute("disabled","true")
 	mealt.setAttribute("disabled","true")
+	mealr.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
+	mealrt.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
 	}
 })
 
