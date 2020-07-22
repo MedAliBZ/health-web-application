@@ -379,11 +379,11 @@ let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
 let h = document.getElementById("home")
-let fa=document.getElementById("faq")
+let fa = document.getElementById("faq")
 
 for (let i = 0; i < 2; i++) {
 	nFAQ[i].addEventListener("click", function () {
-		fa.style.display = "block"
+		fa.style.display = "inline"
 		fa.scrollTop = 0;
 		f.style.display = "none"
 		m1.style.display = "none"
@@ -448,11 +448,11 @@ for (let i = 0; i < 2; i++) {
 let Calsc = document.getElementById("Calsc")
 let Bmic = document.getElementById("Bmic")
 let Custc = document.getElementById("Custc")
-let foodc=document.getElementById("foodc")
-let faqc=document.getElementById("faqc")
+let foodc = document.getElementById("foodc")
+let faqc = document.getElementById("faqc")
 
 faqc.addEventListener("click", function () {
-	fa.style.display = "block"
+	fa.style.display = "inline"
 	fa.scrollTop = 0;
 	f.style.display = "none"
 	m1.style.display = "none"
@@ -502,6 +502,26 @@ Bmic.addEventListener("click", function () {
 })
 
 
+let q = ["A man’s health can be judged by which he takes two at a time – pills or stairs.","Your body holds deep wisdom. Trust in it. Learn from it. Nourish it. Watch your life transform and be healthy.","Most people have no idea how good their body is designed to feel.","Health and intellect are the two blessings of life.","Healthy citizens are the greatest asset any country can have.","The best doctors gives the least medicine.","The only way to keep your health is to eat what you don’t want, drink what you don’t like, and do what you’d rather not.","Our bodies are our gardens – our wills are our gardeners.","Eat to live, not live to eat.","I have chosen to be happy because it is good for my health.","Keep your vitality. A life without health is like a river without water.", "Three things in life – your health, your mission, and the people you love. That’s it.", "A fit body, a calm mind, a house full of love. These things cannot be bought, they must be earned.", "Happiness is the highest form of health.", "The human body is the best picture of the human soul.", "Health is a relationship between you and your body.", "Health is the thing that makes you feel that now is the best time of year.", "It's not about being the best it's about being better than you were yesterday", "The best investment you can ever make is in your own health", "You don't have to be extreme just consistent"]
+console.log(q)
+let q1 = document.getElementById("qu1")
+let q2 = document.getElementById("qu2")
+let q3 = document.getElementById("qu3")
+
+let a, b, c;
+
+a = Math.floor(Math.random() * 20);
+do {
+	b = Math.floor(Math.random() * 20);
+} while (b == a)
+do {
+	c = Math.floor(Math.random() * 20);
+} while (c == b && c == a)
+
+
+q1.innerHTML = q[a]
+q2.innerHTML = q[b]
+q3.innerHTML = q[c]
 
 // food
 
@@ -634,9 +654,9 @@ let ques = document.getElementsByClassName("faq-section")
 for (let i = 0; i < ques.length; i++) {
 	ques[i].children[0].addEventListener("change", function () {
 		if (ques[i].children[0].checked) {
-			ques[i].children[1].style.cssText = `border-color: ${navcolor.value};background: ${navtextcolor.value};background-image: linear-gradient(to bottom, #fff, ${navcolor.value});color:${navtextcolor.value};`
+			ques[i].children[1].style.cssText = `border-color: ${navcolor.value};background: #888;background-image: linear-gradient(to bottom, #fff, ${navcolor.value});color:${navtextcolor.value};`
 		}
 		else
-		ques[i].children[1].style.cssText = `border-color: #888;background: #eee;`
+			ques[i].children[1].style.cssText = `border-color: #888;background: #eee;`
 	})
 }

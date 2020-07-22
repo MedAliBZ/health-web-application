@@ -559,3 +559,7 @@ color: #011627;
       margin: 10%;
       display: none;
   }
+
+  .inside-faq{
+    margin: inherit;
+  }
