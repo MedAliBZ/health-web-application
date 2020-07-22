@@ -379,15 +379,17 @@ let m = document.getElementById("main")
 let m1 = document.getElementById("main1")
 let m2 = document.getElementById("main2")
 let h = document.getElementById("home")
+let fa=document.getElementById("faq")
 
 for (let i = 0; i < 2; i++) {
 	nFAQ[i].addEventListener("click", function () {
-		h.style.display = "none"
-		h.scrollTop = 0;
+		fa.style.display = "block"
+		fa.scrollTop = 0;
 		f.style.display = "none"
 		m1.style.display = "none"
 		m2.style.display = "none"
 		m.style.display = "none"
+		h.style.display = "none"
 	})
 
 	nhome[i].addEventListener("click", function () {
@@ -397,6 +399,7 @@ for (let i = 0; i < 2; i++) {
 		m1.style.display = "none"
 		m2.style.display = "none"
 		m.style.display = "none"
+		fa.style.display = "none"
 	})
 
 	nfoood[i].addEventListener("click", function () {
@@ -406,6 +409,7 @@ for (let i = 0; i < 2; i++) {
 		m1.style.display = "none"
 		m2.style.display = "none"
 		m.style.display = "none"
+		fa.style.display = "none"
 	})
 
 	nBMI[i].addEventListener("click", function () {
@@ -415,6 +419,7 @@ for (let i = 0; i < 2; i++) {
 		m1.style.display = "none"
 		m2.style.display = "none"
 		h.style.display = "none"
+		fa.style.display = "none"
 	})
 
 	nCAL[i].addEventListener("click", function () {
@@ -424,6 +429,7 @@ for (let i = 0; i < 2; i++) {
 		m.style.display = "none"
 		m2.style.display = "none"
 		h.style.display = "none"
+		fa.style.display = "none"
 	})
 
 	nCUS[i].addEventListener("click", function () {
@@ -433,6 +439,7 @@ for (let i = 0; i < 2; i++) {
 		m1.style.display = "none"
 		m.style.display = "none"
 		h.style.display = "none"
+		fa.style.display = "none"
 	})
 }
 
@@ -441,7 +448,28 @@ for (let i = 0; i < 2; i++) {
 let Calsc = document.getElementById("Calsc")
 let Bmic = document.getElementById("Bmic")
 let Custc = document.getElementById("Custc")
+let foodc=document.getElementById("foodc")
+let faqc=document.getElementById("faqc")
 
+faqc.addEventListener("click", function () {
+	fa.style.display = "block"
+	fa.scrollTop = 0;
+	f.style.display = "none"
+	m1.style.display = "none"
+	m2.style.display = "none"
+	m.style.display = "none"
+	h.style.display = "none"
+})
+
+foodc.addEventListener("click", function () {
+	f.style.display = "flex"
+	f.scrollTop = 0;
+	h.style.display = "none"
+	m1.style.display = "none"
+	m2.style.display = "none"
+	m.style.display = "none"
+	fa.style.display = "none"
+})
 
 
 Custc.addEventListener("click", function () {

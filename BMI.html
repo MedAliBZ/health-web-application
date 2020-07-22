@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <!-- navbar -->
+
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="res/hicon.png" width="30" height="30" class="d-inline-block align-top" alt="">Healthier</a>
@@ -25,6 +27,9 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link nhome" href="#">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nFAQ" href="#">FAQ</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -40,14 +45,13 @@
                 <li class="nav-item">
                     <a class="nav-link nCUS" href="#">Customise your website</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nFAQ" href="#">FAQ</a>
-                </li>
             </ul>
         </div>
     </nav>
+
     <main>
         <!-- home -->
+
         <div id="home">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -79,6 +83,17 @@
                     the process.</span>
             </div>
 
+            <div class="main00">
+                <span class="nav-link">If you have some serious health problems please check your doctor, and remember you do not have to be ill to have a health check – in fact, most people have their annual health check when they're feeling well.</span>
+            </div>
+
+            <div class="main0">
+                <h2 class="loun">FAQ</h2>
+                <span class="loun">Frequently Asked Questions, this section is where u find an answer to most of your questions.</span>
+                <button id="faqc" class="btn btn1" type="submit">Check it now</button>
+            </div>
+            
+
             <div class="quotes">
                 <h3 class="nav-link">Quotes</h3>
                 <div class="inside-quotes">
@@ -95,20 +110,6 @@
                         <span class="nav-link">"You don't have to be extreme just consistent"</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="main0">
-                <h2 class="loun">What's a BMI ?</h2>
-                <span class="loun">Body Mass Index (BMI) is a measurement of a person’s weight with respect to his or
-                    her height. It is more of an indicator than a direct measurement of a person’s total body
-                    fat.</span>
-            </div>
-            <div class="main00">
-                <h2 class="nav-link">Is BMI applicable for all ?</h2>
-                <span class="nav-link">For most people, BMI can be used to provide a good measure of obesity. But BMI
-                    fails
-                    to provide actual information on body composition like amount of muscle, bone, fat, and other
-                    tissues.</span>
             </div>
 
             <div class="features">
@@ -129,18 +130,27 @@
                     </div>
                     <span class="vl loun"></span>
                     <div>
-                        <h4 class="loun">The Customiser</h4>
-                        <span class="loun">You don't like the colors ? Do you think that the developer is bad at
-                            choosing
-                            colors ?<br>Yea sure, you can modify the colors the way you want.</span>
-                        <button id="Custc" class="btn btn1" type="submit">Check it now</button>
+                        <h4 class="loun">Food Tracker</h4>
+                        <span class="loun">A very easy way to keep track of the calories you eat per meal and enjoy your food without worrying about it.</span>
+                        <button id="foodc" class="btn btn1" type="submit">Check it now</button>
+                        
                     </div>
                 </div>
             </div>
 
+            <div class="main0">
+                <h2 class="loun">The Customiser</h2>
+                <span class="loun">You don't like the colors ? Do you think that the developer is bad at
+                    choosing
+                    colors ?<br>Yea sure, you can modify the colors the way you want.</span>
+                <button id="Custc" class="btn btn1" type="submit">Check it now</button>
+            </div>
+
 
         </div>
+
         <!-- BMI -->
+
         <div id="main">
             <div class="log">
                 <img src="res/BMI.png" width="100%">
@@ -246,7 +256,6 @@
             </div>
         </div>
 
-
         <!-- customiser -->
 
         <div id="main2">
@@ -300,6 +309,7 @@
             </div>
             <button class="btn btn1" id="reset" type="submit">reset</button>
         </div>
+
         <!-- food -->
 
         <div id="food">
@@ -311,7 +321,7 @@
                 <input id="food-text" class="form-control mr-sm-2" type="search" placeholder="Your food's name"
                     aria-label="Search">
                 <input id="food-qte" class="form-control mr-sm-2" type="search"
-                    placeholder="Quantity in grams or milliliter if liquid" aria-label="Search">
+                    placeholder="Quantity in grams or centiliters if liquid" aria-label="Search">
                 <button id="food-search" class="btn btn1" type="submit">Search</button>
             </div>
             <div class="car">
@@ -378,11 +388,10 @@
               </section>
         </div>
 
-
     </main>
 
-
     <!-- Site footer -->
+
     <footer class="cus site-footer">
         <div class="container">
             <div class="row">
@@ -396,11 +405,11 @@
                     <h6 class="cus">Navigation</h6>
                     <ul class="footer-links">
                         <li><a class="cus cusa nhome" href="#">Home</a></li>
+                        <li><a class="cus cusa nFAQ" href="#">FAQ</a></li>
                         <li><a class="cus cusa nBMI" href="#">BMI Calculator</a></li>
                         <li><a class="cus cusa nCAL" href="#">Calories Calculator</a></li>
                         <li><a class="cus cusa nfood" href="#">Food Tracker</a></li>
                         <li><a class="cus cusa nCUS" href="#">The Customiser</a></li>
-                        <li><a class="cus cusa nFAQ" href="#">FAQ</a></li>
                     </ul>
                 </div>
             </div>

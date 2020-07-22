@@ -131,7 +131,7 @@ color: #011627;
 }
 
 #calories1,#gl1{
-    color: #5ca5d3;
+    color: #457b9d;
 }
 
 .resultat1{
@@ -185,6 +185,13 @@ color: #011627;
     margin-left: 3%;
     display: flex !important;
 }
+
+.footerc{
+    margin-left: 3%;
+    display: flex !important;
+}
+
+
 .hic{
     margin-left: 3%;
     display: flex !important;
@@ -201,12 +208,16 @@ color: #011627;
 /* home */
 
 .main0{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     margin-top: 5%;
     font-family: 'Quicksand', sans-serif;
     color: white;
     margin-left: 2%;
     margin-right: 2%;
+    align-items: center;
 }
 
 .main0 h2{
@@ -217,6 +228,11 @@ color: #011627;
 .main0 span{
     font-weight: 400;
     font-size: 30px;
+}
+
+.main0 .btn{
+    margin-top: 1%;
+    width: fit-content;
 }
 
 .quotes{
@@ -541,4 +557,5 @@ color: #011627;
 
   #faq{
       margin: 10%;
+      display: none;
   }
