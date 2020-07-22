@@ -34,11 +34,14 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item nav-link nBMI" href="#">BMI Calculator</a>
                         <a class="dropdown-item nav-link nCAL" href="#">Calories Calculator</a>
-                        <a class="dropdown-item nav-link nfood" href="#">Food Tracker</a>                        
+                        <a class="dropdown-item nav-link nfood" href="#">Food Tracker</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nCUS" href="#">Customise your website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nFAQ" href="#">FAQ</a>
                 </li>
             </ul>
         </div>
@@ -180,7 +183,8 @@
                     <br><span class="loun">and that means </span>
                     <span class="loun">you are </span><span id="health">test</span>
                     <br>
-                    <span class="loun">Your ideal weight is </span><span id="ideal">xx</span><span class="loun"> Kg</span>
+                    <span class="loun">Your ideal weight is </span><span id="ideal">xx</span><span class="loun">
+                        Kg</span>
                 </span>
             </div>
         </div>
@@ -323,8 +327,9 @@
                 <span class="sr-only">Loading...</span>
             </div>
             <div id="mealq">
-                <div style="margin-right: 10%;margin-top: 5%;"> 
-                    <h1 class="kimanavbar akal">EAT LESS</h1><h1 class="kimanavbar akber">SUGAR</h1>
+                <div style="margin-right: 10%;margin-top: 5%;">
+                    <h1 class="kimanavbar akal">EAT LESS</h1>
+                    <h1 class="kimanavbar akber">SUGAR</h1>
                     <h4 class="kimanavbar sghira">YOU'RE SWEET ENOUGH ALREADY</h4>
                 </div>
                 <div style="margin-left: 10%;margin-top: 3%;">
@@ -336,9 +341,11 @@
                             </ol>
                             <input disabled id="meal1-remove" class="form-control mr-sm-2" type="search"
                                 placeholder="num of the ingredient" aria-label="Search">
-                            <button disabled id="meal-remove1" class="btn btn1" type="submit">Delete this ingredient</button>
+                            <button disabled id="meal-remove1" class="btn btn1" type="submit">Delete this
+                                ingredient</button>
                             <span class="loun" style="margin-top: 20px;">Or</span>
-                            <button disabled id="meal-remove" class="btn btn1" type="submit">Delete the whole meal</button>
+                            <button disabled id="meal-remove" class="btn btn1" type="submit">Delete the whole
+                                meal</button>
                         </div>
                     </div>
                 </div>
@@ -347,6 +354,30 @@
                 <span class="nav-link">Your meal's total calories: </span><span id="tot-text" class="nav-link">0</span>
             </div>
         </div>
+
+        <!-- FAQ -->
+
+        <div id="faq">
+            <section class="faq-section">
+                <input type="checkbox" id="q1">
+                <label for="q1">What's a BMI ?</label>
+                <p class="loun">Body Mass Index..</p>
+                <p class="loun">Body Mass Index (BMI) is a measurement of a person’s weight with respect to his or her height. It is more of an indicator than a direct measurement of a person’s total body fat.</p>
+              </section>
+              <section class="faq-section">
+                <input type="checkbox" id="q2">
+                <label for="q2">Is BMI applicable for all ?</label>
+                <p class="loun">Yes but..</p>
+                <p class="loun">For most people, BMI can be used to provide a good measure of obesity. But BMI fails to provide actual information on body composition like amount of muscle, bone, fat, and other tissues.</p>
+              </section>
+              <section class="faq-section">
+                <input type="checkbox" id="q3">
+                <label for="q3"> whats the healthy BMI range ?</label>
+                <p class="loun">18.5 - 25</p>
+                <p class="loun">The World Health Organization's (WHO) recommended healthy BMI range is 18.5 - 25 for both male and female. Based on the BMI range, it is possible to find out a healthy weight for any given height.</p>
+              </section>
+        </div>
+
 
     </main>
 
@@ -369,6 +400,7 @@
                         <li><a class="cus cusa nCAL" href="#">Calories Calculator</a></li>
                         <li><a class="cus cusa nfood" href="#">Food Tracker</a></li>
                         <li><a class="cus cusa nCUS" href="#">The Customiser</a></li>
+                        <li><a class="cus cusa nFAQ" href="#">FAQ</a></li>
                     </ul>
                 </div>
             </div>

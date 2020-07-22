@@ -233,7 +233,7 @@ let reset = document.getElementById("reset")
 
 let log = document.querySelectorAll(".log")
 
-let kimanav=document.querySelectorAll(".kimanavbar")
+let kimanav = document.querySelectorAll(".kimanavbar")
 
 bodytextcolor.value = "#FFFFFF"
 bodybuttoncolor.value = "#457b9d"
@@ -274,7 +274,7 @@ reset.addEventListener("click", function () {
 	for (let i = 0; i < bodytext.length; i++)
 		bodytext[i].style.cssText = `color: ${bodytextcolor.value} !important;`
 	for (let i = 0; i < kimanav.length; i++)
-	kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
+		kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
 	reset.style.cssText = `color: ${bodycolor.value} !important; background-color:${bodybuttoncolor.value} !important; outline-color:${bodybuttoncolor.value} !important;  border-color:${bodybuttoncolor.value} !important;`
 })
 
@@ -353,7 +353,7 @@ navchange.addEventListener("click", function () {
 	document.querySelector(".carousel").style.cssText = `background-color: ${navcolor.value} !important;`
 	document.querySelector("#tot").style.cssText = `background-color: ${navcolor.value} !important;`
 	for (let i = 0; i < kimanav.length; i++)
-	kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
+		kimanav[i].style.cssText = `color: ${navcolor.value} !important;`
 })
 
 bodychange.addEventListener("click", function () {
@@ -368,6 +368,7 @@ footerchange.addEventListener("click", function () {
 
 // change page
 
+let nFAQ = document.getElementsByClassName("nFAQ")
 let nBMI = document.getElementsByClassName("nBMI")
 let nCAL = document.getElementsByClassName("nCAL")
 let nCUS = document.getElementsByClassName("nCUS")
@@ -380,6 +381,15 @@ let m2 = document.getElementById("main2")
 let h = document.getElementById("home")
 
 for (let i = 0; i < 2; i++) {
+	nFAQ[i].addEventListener("click", function () {
+		h.style.display = "none"
+		h.scrollTop = 0;
+		f.style.display = "none"
+		m1.style.display = "none"
+		m2.style.display = "none"
+		m.style.display = "none"
+	})
+
 	nhome[i].addEventListener("click", function () {
 		h.style.display = "block"
 		h.scrollTop = 0;
@@ -530,14 +540,14 @@ foodsearch.addEventListener("click", function () {
 	}
 })
 
-let mealt=document.getElementById("meal1-remove")
-let mealrt=document.getElementById("meal-remove1")
-let mealr=document.getElementById("meal-remove")
+let mealt = document.getElementById("meal1-remove")
+let mealrt = document.getElementById("meal-remove1")
+let mealr = document.getElementById("meal-remove")
 
-mealr.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;`
-mealrt.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;`
+mealr.style.cssText = `background-color:transparent !important;color:${bodybuttoncolor.value} !important;`
+mealrt.style.cssText = `background-color:transparent !important;color:${bodybuttoncolor.value} !important;`
 
-mealr.addEventListener("mouseover",function(){
+mealr.addEventListener("mouseover", function () {
 	event.preventDefault()
 })
 
@@ -550,7 +560,7 @@ addfood.addEventListener("click", function () {
 	foodtext.value = ""
 	foodqte.value = ""
 	node.replaceChild(textnode, textnode)
-	if (document.getElementById("ingredients").childElementCount > 0){
+	if (document.getElementById("ingredients").childElementCount > 0) {
 		mealr.removeAttribute("disabled")
 		mealrt.removeAttribute("disabled")
 		mealt.removeAttribute("disabled")
@@ -560,30 +570,45 @@ addfood.addEventListener("click", function () {
 rem.addEventListener("click", function () {
 	let no = document.getElementById("ingredients")
 	no.querySelectorAll('*').forEach(n => n.remove())
-	mealr.setAttribute("disabled","true")
-	mealrt.setAttribute("disabled","true")
-	mealr.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
-	mealrt.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
-	mealt.setAttribute("disabled","true")
+	mealr.setAttribute("disabled", "true")
+	mealrt.setAttribute("disabled", "true")
+	mealr.style.cssText = `background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
+	mealrt.style.cssText = `background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
+	mealt.setAttribute("disabled", "true")
 	document.getElementById("tot-text").innerHTML = 0
 })
 
-rem1.addEventListener("click",function(){
-	let no =document.getElementById("ingredients")
-	let childs=no.childNodes
-	let tab=childs[document.getElementById("meal1-remove").value].innerHTML.split(" ")
+rem1.addEventListener("click", function () {
+	let no = document.getElementById("ingredients")
+	let childs = no.childNodes
+	let tab = childs[document.getElementById("meal1-remove").value].innerHTML.split(" ")
 	console.log(tab)
 
-	document.getElementById("tot-text").innerHTML = parseFloat(document.getElementById("tot-text").innerHTML)-parseFloat(tab[tab.length-2])
+	document.getElementById("tot-text").innerHTML = parseFloat(document.getElementById("tot-text").innerHTML) - parseFloat(tab[tab.length - 2])
 	no.removeChild(no.childNodes[document.getElementById("meal1-remove").value])
-	
-	document.getElementById("meal1-remove").value=""
-	if(no.childElementCount==0){
-	mealr.setAttribute("disabled","true")
-	mealrt.setAttribute("disabled","true")
-	mealt.setAttribute("disabled","true")
-	mealr.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
-	mealrt.style.cssText=`background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
+
+	document.getElementById("meal1-remove").value = ""
+	if (no.childElementCount == 0) {
+		mealr.setAttribute("disabled", "true")
+		mealrt.setAttribute("disabled", "true")
+		mealt.setAttribute("disabled", "true")
+		mealr.style.cssText = `background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
+		mealrt.style.cssText = `background-color:transparent !important;color:${bodybuttoncolor.value} !important;border-color:${bodybuttoncolor.value} !important;`
 	}
 })
 
+//faq
+
+let ques = document.getElementsByClassName("faq-section")
+
+
+
+for (let i = 0; i < ques.length; i++) {
+	ques[i].children[0].addEventListener("change", function () {
+		if (ques[i].children[0].checked) {
+			ques[i].children[1].style.cssText = `border-color: ${navcolor.value};background: ${navtextcolor.value};background-image: linear-gradient(to bottom, #fff, ${navcolor.value});color:${navtextcolor.value};`
+		}
+		else
+		ques[i].children[1].style.cssText = `border-color: #888;background: #eee;`
+	})
+}
