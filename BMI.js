@@ -516,7 +516,7 @@ do {
 } while (b == a)
 do {
 	c = Math.floor(Math.random() * 20);
-} while (c == b && c == a)
+} while (c == b || c == a)
 
 
 q1.innerHTML = q[a]
