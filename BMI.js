@@ -573,7 +573,7 @@ foodsearch.addEventListener("click", function () {
 					spinnerf.style.cssText = "display:none !important;"
 					carte.style.cssText = "display:inline !important;"
 					let k = ((parseFloat(data.parsed[0].food.nutrients.ENERC_KCAL) / 100) * parseFloat(foodqte.value))
-					kcal.innerHTML = k
+					kcal.innerHTML = k.toFixed(2)
 					textnode = document.createTextNode(`${foodtext.value}: ${kcal.innerHTML} Calories`);
 					s = parseFloat(document.getElementById("tot-text").innerHTML) + parseFloat(kcal.innerHTML)
 				}
